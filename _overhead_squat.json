@@ -1,0 +1,183 @@
+{	"name": "overhead squat",
+	"angles":{	
+		"left":	{
+			"left_knee_angle": 		{	"left_joint": "Left_Hip", "mid_joint": "Left_Knee", "right_joint":"Left_Ankle", 
+										"min_val": 28, "max_val": 178, 
+										"in_motion": "reduce", 
+										"type": "target", 
+										"score_weight": 0.0, 
+										"phase_angle": "True", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"left_shin_angle":  	{	"left_joint": "Left_Knee", "mid_joint": "Left_Ankle", "right_joint": ["Left_Ankle", 1, 1.20], 
+										"min_val": 147, "max_val":180, 
+										"in_motion": "reduce", 
+										"type": "interval", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"left_spine_angle":  	{	"left_joint": "Left_Shoulder", "mid_joint": "Left_Hip", "right_joint": ["Left_Hip", 1, 1.20], 
+										"min_val": 164, "max_val":180, 
+										"in_motion": "reduce", 
+										"type": "interval", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"left_hip_angle":  		{	"left_joint": ["Left_Hip", 1, 1.20], "mid_joint": "Left_Hip", "right_joint": "Left_Knee", 
+										"min_val": 4, "max_val": 121, 
+										"in_motion": "increase", 
+										"type": "target", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"left_shoulder_angle": 	{	"left_joint": "Left_Wrist", "mid_joint": "Left_Shoulder", "right_joint": ["Left_Shoulder", 1, 1.20], 
+										"min_val": 164, "max_val": 172, 
+										"in_motion": "reduce", 
+										"type": "interval", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"}
+	    },
+		"right": {
+			
+			"right_knee_angle": 	{	"left_joint": "Right_Hip", "mid_joint": "Right_Knee", "right_joint":"Right_Ankle", 
+										"min_val": 28, "max_val": 178, 
+										"in_motion": "reduce", 
+										"type": "target", 
+										"score_weight": 0.0, 
+										"phase_angle": "True", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"right_shin_angle":  	{	"left_joint": "Right_Knee", "mid_joint": "Right_Ankle", "right_joint": ["Right_Ankle", 1, 1.20], 
+										"min_val": 147, "max_val":180, 
+										"in_motion": "reduce", 
+										"type": "interval", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"right_spine_angle":  	{	"left_joint": "Right_Shoulder", "mid_joint": "Right_Hip", "right_joint": ["Right_Hip", 1, 1.20], 
+										"min_val": 164, "max_val":180, 
+										"in_motion": "reduce", 
+										"type": "interval", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"right_hip_angle":  	{	"left_joint": ["Right_Hip", 1, 1.20], "mid_joint": "Right_Hip", "right_joint": "Right_Knee", 
+										"min_val": 4, "max_val": 121, 
+										"in_motion": "increase", 
+										"type": "target", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"},
+
+			"right_shoulder_angle": {	"left_joint": "Right_Wrist", "mid_joint": "Right_Shoulder", "right_joint": ["Right_Shoulder", 1, 1.20], 
+										"min_val": 164, "max_val": 172, 
+										"in_motion": "reduce", 
+										"type": "interval", 
+										"score_weight": 0.25, 
+										"phase_angle": "False", 
+										"full_round": "True", 
+										"small_angle": "True"}
+		}
+	},
+
+	"phases":{
+		"left": {
+				"1": {"phase": 0, "phase_update": 1, "rep_complete": 0, "angles": {"left_knee_angle": {"sign": "<", "value": 165}}},
+                "2": {"phase": 1, "phase_update": 0, "rep_complete": 0, "angles": {"left_knee_angle": {"sign": ">", "value": 170}}},
+                "3": {"phase": 1, "phase_update": 2, "rep_complete": 0, "angles": {"left_knee_angle": {"sign": "<", "value": 130}}},
+                "4": {"phase": 2, "phase_update": 3, "rep_complete": 0, "angles": {"left_knee_angle": {"sign": ">", "value": 140}}},
+                "5": {"phase": 3, "phase_update": 0, "rep_complete": 1, "angles": {"left_knee_angle": {"sign": ">", "value": 170}}}
+		},
+
+		"right": {
+				"1": {"phase": 0, "phase_update": 1, "rep_complete": 0, "angles": {"right_knee_angle": {"sign": "<", "value": 165}}},
+                "2": {"phase": 1, "phase_update": 0, "rep_complete": 0, "angles": {"right_knee_angle": {"sign": ">", "value": 170}}},
+                "3": {"phase": 1, "phase_update": 2, "rep_complete": 0, "angles": {"right_knee_angle": {"sign": "<", "value": 130}}},
+                "4": {"phase": 2, "phase_update": 3, "rep_complete": 0, "angles": {"right_knee_angle": {"sign": ">", "value": 140}}},
+                "5": {"phase": 3, "phase_update": 0, "rep_complete": 1, "angles": {"right_knee_angle": {"sign": ">", "value": 170}}}
+		}
+	},
+
+	"rules":{
+		"left": { 
+			"check_knees2": 	{	"priority": 2, "phase": 2, "angles": {"left_shin_angle": {"min_or_max": "min", "sign": "<", "threshold": 140}}, 
+									"fail_message": "Don't let knees pass the toes", 
+									"pass_message": ""},
+
+			"check_chest2": 	{	"priority": 1, "phase": 2, "angles": {"left_spine_angle": {"min_or_max": "min", "sign": "<", "threshold": 155}}, 
+									"fail_message": "Keep chest up", 
+									"pass_message": "Good work on keeping chest up!"},
+
+			"check_hips2": 		{	"priority": 2, "phase": 2, "angles": {"left_hip_angle": {"min_or_max": "min", "sign": ">", "threshold": 85}}, 
+									"fail_message": "sit hips lower", 
+									"pass_message": "Great hip depth!"},
+
+			"check_arms0": 		{	"priority": 2, "phase": 0, "angles": {"left_shoulder_angle": {"min_or_max": "min", "sign": "<", "threshold": 180}}, 
+									"fail_message": "Keep arms up at start", 
+									"pass_message": ""},
+
+			"check_arms2": 		{	"priority": 2, "phase": 2, "angles": {"left_shoulder_angle": {"min_or_max": "min", "sign": "<", "threshold": 160}}, 
+									"fail_message": "Keep arms up", 
+									"pass_message": ""}
+		},
+
+		"right": { 
+			"check_knees2": 	{	"priority": 2, "phase": 2, "angles": {"right_shin_angle": {"min_or_max": "min", "sign": "<", "threshold": 140}}, 
+									"fail_message": "Don't let knees pass the toes", 
+									"pass_message": ""},
+
+			"check_chest2": 	{	"priority": 1, "phase": 2, "angles": {"right_spine_angle": {"min_or_max": "min", "sign": "<", "threshold": 155}}, 
+									"fail_message": "Keep chest up", 
+									"pass_message": "Good work on keeping chest up!"},
+
+			"check_hips2": 		{	"priority": 2, "phase": 2, "angles": {"right_hip_angle": {"min_or_max": "min", "sign": ">", "threshold": 85}}, 
+									"fail_message": "sit hips lower", 
+									"pass_message": "Great hip depth!"},
+
+			"check_arms0": 		{	"priority": 2, "phase": 0, "angles": {"right_shoulder_angle": {"min_or_max": "min", "sign": "<", "threshold": 160}}, 
+									"fail_message": "Keep arms up at start", 
+									"pass_message": ""},
+
+			"check_arms2": 		{	"priority": 2, "phase": 2, "angles": {"right_shoulder_angle": {"min_or_max": "min", "sign": "<", "threshold": 160}}, 
+									"fail_message": "Keep arms up", 
+									"pass_message": ""}
+		}
+	},
+
+	"tolerance": {
+		"left": 0.0,
+		"right": 0.0,
+		"front": 0.0
+	},
+
+	"feedback_probs": {
+		"left":	{
+			"fail_prob": 0.60, "pass_prob": 0.30, "custom_prob": 0.10, "shush_prob": 0.0
+		},
+		"right":	{
+			"fail_prob": 0.60, "pass_prob": 0.30, "custom_prob": 0.10, "shush_prob": 0.0
+		}
+	},
+
+	"display_joints": {	"left": ["Left_Shoulder", "Left_Elbow", "Left_Wrist", "Left_Index", "Left_Hip", "Left_Knee", "Left_Ankle","Left_Foot_Index"], 
+						"right": ["Right_Shoulder", "Right_Elbow", "Right_Wrist", "Right_Index", "Right_Hip", "Right_Knee", "Right_Ankle", "Right_Foot_Index"]}
+}
+
+
+
+
